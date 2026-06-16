@@ -66,7 +66,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'cosx_home',
+    'prosportshop_home',
 
     "django.contrib.admin",
 

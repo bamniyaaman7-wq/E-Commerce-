@@ -26,7 +26,7 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
 
-    return render(request, 'cosx_home/home.html')
+    return render(request, 'prosportshop_home/home.html')
 
 
 
@@ -56,7 +56,7 @@ def register(request):
 
                 messages.error(request, "username already exists")
 
-                return render(request, 'cosx_home/register.html')        
+                return render(request, 'prosportshop_home/register.html')        
 
             elif User.objects.filter(email=email).exists():
 
@@ -64,7 +64,7 @@ def register(request):
 
                 messages.error(request, "email already exists")
 
-                return render(request, 'cosx_home/register.html')
+                return render(request, 'prosportshop_home/register.html')
 
             
 
@@ -86,7 +86,7 @@ def register(request):
 
             messages.error(request, "both passwords should match!!")    
 
-    return render(request, 'cosx_home/register.html')
+    return render(request, 'prosportshop_home/register.html')
 
 
 
@@ -108,7 +108,7 @@ def login(request):
 
             auth.login(request, user)
 
-            return redirect('cosx-home')
+            return redirect('prosportshop-home')
 
         
 
@@ -120,7 +120,7 @@ def login(request):
 
 
 
-    return render(request, 'cosx_home/login.html')
+    return render(request, 'prosportshop_home/login.html')
 
 
 
@@ -198,7 +198,7 @@ def products(request):
 
 
 
-        return render(request, 'cosx_home/products.html', context)
+        return render(request, 'prosportshop_home/products.html', context)
 
 
 
@@ -240,7 +240,7 @@ def products(request):
 
     }
 
-    return render(request, 'cosx_home/products.html', context)
+    return render(request, 'prosportshop_home/products.html', context)
 
 
 
@@ -256,7 +256,7 @@ def productdetails(request,pk):
 
     }
 
-    return render(request,'cosx_home/productdetails.html',context)
+    return render(request,'prosportshop_home/productdetails.html',context)
 
 
 
@@ -282,7 +282,7 @@ def cart(request):
 
     if len(product_ids) == 0:
 
-        return render(request, 'cosx_home/cart.html', context={})
+        return render(request, 'prosportshop_home/cart.html', context={})
 
     
 
@@ -298,7 +298,7 @@ def cart(request):
 
 
 
-    return render(request, 'cosx_home/cart.html', context={'products': all_products, 'n_items': len(all_products)})
+    return render(request, 'prosportshop_home/cart.html', context={'products': all_products, 'n_items': len(all_products)})
 
 
 
@@ -430,7 +430,7 @@ def checkout(request, pk):
 
     }
 
-    return render(request, 'cosx_home/checkout.html', context = context)
+    return render(request, 'prosportshop_home/checkout.html', context = context)
 
 
 
@@ -538,7 +538,7 @@ def checkout_fromcart(request):
 
 
 
-    return render(request, 'cosx_home/checkout.html', context=context)
+    return render(request, 'prosportshop_home/checkout.html', context=context)
 
 
 
@@ -548,7 +548,7 @@ def checkout_fromcart(request):
 
 def wallet(request):
 
-    return render(request, 'cosx_home/wallet.html', context={'wallet':  Wallet.objects.filter(user=request.user)[0].wallet})
+    return render(request, 'prosportshop_home/wallet.html', context={'wallet':  Wallet.objects.filter(user=request.user)[0].wallet})
 
 
 
@@ -556,7 +556,7 @@ def wallet(request):
 
 def success(request):
 
-    return render(request, 'cosx_home/success.html')
+    return render(request, 'prosportshop_home/success.html')
 
 
 
@@ -580,7 +580,7 @@ def orders(request):
 
         context = {}
 
-    return render(request, 'cosx_home/orders.html', context)
+    return render(request, 'prosportshop_home/orders.html', context)
 
 
 
@@ -646,11 +646,11 @@ def order_details(request, pk):
 
             f = False        
 
-        return render(request, 'cosx_home/order_details.html', context={'order': order, 'f': f, 'rating': rating})    
+        return render(request, 'prosportshop_home/order_details.html', context={'order': order, 'f': f, 'rating': rating})    
 
     
 
-    return render(request, 'cosx_home/order_details.html', context={'order': order, 'f': f, 'rating': rate_value})
+    return render(request, 'prosportshop_home/order_details.html', context={'order': order, 'f': f, 'rating': rate_value})
 
 
 
@@ -664,7 +664,7 @@ def wishlist(request):
 
     if len(product_ids) == 0:
 
-        return render(request, 'cosx_home/wishlist.html', context={})
+        return render(request, 'prosportshop_home/wishlist.html', context={})
 
     
 
@@ -676,7 +676,7 @@ def wishlist(request):
 
     
 
-    return render(request, 'cosx_home/wishlist.html', context={'products': all_products, 'n_items': len(all_products)})
+    return render(request, 'prosportshop_home/wishlist.html', context={'products': all_products, 'n_items': len(all_products)})
 
 
 

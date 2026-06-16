@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
 
-        ('cosx_home', '0003_alter_orders_order_date'),
+        ('prosportshop_home', '0003_alter_orders_order_date'),
 
     ]
 

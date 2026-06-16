@@ -170,7 +170,7 @@ class Migration(migrations.Migration):
 
                         on_delete=django.db.models.deletion.CASCADE,
 
-                        to="cosx_home.products",
+                        to="prosportshop_home.products",
 
                     ),
 
@@ -284,7 +284,7 @@ class Migration(migrations.Migration):
 
                         on_delete=django.db.models.deletion.CASCADE,
 
-                        to="cosx_home.orders",
+                        to="prosportshop_home.orders",
 
                     ),
 
@@ -298,7 +298,7 @@ class Migration(migrations.Migration):
 
                         on_delete=django.db.models.deletion.CASCADE,
 
-                        to="cosx_home.products",
+                        to="prosportshop_home.products",
 
                     ),
 
@@ -316,7 +316,7 @@ class Migration(migrations.Migration):
 
             field=models.ForeignKey(
 
-                on_delete=django.db.models.deletion.CASCADE, to="cosx_home.products"
+                on_delete=django.db.models.deletion.CASCADE, to="prosportshop_home.products"
 
             ),
 
@@ -368,7 +368,7 @@ class Migration(migrations.Migration):
 
                         on_delete=django.db.models.deletion.CASCADE,
 
-                        to="cosx_home.products",
+                        to="prosportshop_home.products",
 
                     ),
 

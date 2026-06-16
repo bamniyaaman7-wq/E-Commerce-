@@ -42,7 +42,7 @@ urlpatterns = [
 
     path("admin/", admin.site.urls),
 
-    path('', include('cosx_home.urls'))
+    path('', include('prosportshop_home.urls'))
 
 ]
 

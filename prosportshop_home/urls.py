@@ -12,9 +12,9 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.home, name="cosx-home"),
+    path('', views.home, name="prosportshop-home"),
 
-    path('products/', views.products, name="cosx-products"),
+    path('products/', views.products, name="prosportshop-products"),
 
     path('login/', views.login, name='login'),
 

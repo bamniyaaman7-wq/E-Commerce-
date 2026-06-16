@@ -154,9 +154,9 @@
 
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 
-            <li><a href="{% url 'cosx-home' %}" class="text-light nav-link px-2 link-primary">Home</a></li>
+            <li><a href="{% url 'prosportshop-home' %}" class="text-light nav-link px-2 link-primary">Home</a></li>
 
-            <li><a href="{% url 'cosx-products' %}" class="text-light nav-link px-2 link-primary">Products</a></li>
+            <li><a href="{% url 'prosportshop-products' %}" class="text-light nav-link px-2 link-primary">Products</a></li>
 
             {% if user.is_authenticated %}            
 
@@ -182,7 +182,7 @@
 
             
 
-            <a href="{% url 'cosx-home' %}" type="button" class="btn text-light border-light ">{{user.username}}</a>
+            <a href="{% url 'prosportshop-home' %}" type="button" class="btn text-light border-light ">{{user.username}}</a>
 
             <a href="{% url 'logout' %}" type="button" class="btn text-light">Logout</a>
 
